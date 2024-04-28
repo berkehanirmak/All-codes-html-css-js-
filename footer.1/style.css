@@ -1,0 +1,89 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+.footer p {
+    margin: 20px 0 50px; 
+}
+.footer .social-icons {
+    margin-top: 20px;
+}
+.footer .social-icons a {
+    font-size: 70px;
+    margin: 0 30px;
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+    display: inline-block;
+    padding: 0 0 10px 0; 
+}
+.footer .social-icons a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; 
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #fff; 
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+.footer .social-icons a:hover::after {
+    opacity: 1; 
+}
+.footer .social-icons a:hover {
+    transform: translateY(-5px);
+}
+.footer .social-icons a:nth-child(1) i,
+.footer .social-icons a:nth-child(2) i,
+.footer .social-icons a:nth-child(3) i,
+.footer .social-icons a:nth-child(4) i {
+    color: #f3f2ed; 
+}
+.footer .social-icons a i {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer .social-icons a:nth-child(1):hover i {
+    transform: scale(1.2); 
+    color: #3b5998; 
+    animation: shake 0.5s infinite alternate; 
+
+}
+.footer .social-icons a:nth-child(2):hover i {
+    transform: scale(1.2); 
+    color: #0077b5; 
+    animation: shake 0.5s infinite alternate; 
+
+}
+.footer .social-icons a:nth-child(3):hover i {
+    transform: scale(1.2); 
+    color: #e4405f; 
+    animation: shake 0.5s infinite alternate;
+
+}
+.footer .social-icons a:nth-child(4):hover i {
+    transform: scale(1.2); 
+    color: #0077b5; 
+    animation: shake 0.5s infinite alternate; 
+
+}
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-5px);
+    }
+}
