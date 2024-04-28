@@ -1,0 +1,68 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(city.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+
+}
+.custom-button {
+    margin-top: 300px;
+    background-color: #4CAF50; /* Yeşil */
+    border: 2px solid #4CAF50; /* Yeşil */
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.custom-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: width 0.3s, height 0.3s, top 0.3s, left 0.3s;
+    border-radius: 50%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+}
+
+.custom-button:hover::before {
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+}
+
+.custom-button span {
+    position: relative;
+    z-index: 1;
+}
+
+.custom-button:hover {
+    background-color: #45a049; /* Koyu yeşil */
+    border-color: #45a049; /* Koyu yeşil */
+}
+
+.custom-button:active {
+    background-color: #3e8e41; /* Daha koyu yeşil */
+    border-color: #3e8e41; /* Daha koyu yeşil */
+}
