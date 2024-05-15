@@ -6,7 +6,6 @@
     font-family: 'Poppins',sans-serif;
 }
 body{
-    background: url("city.jpg");
     background-size: cover;
     background-repeat:no-repeat;
     background-attachment: fixed;
@@ -29,39 +28,6 @@ body{
     background: linear-gradient(rgba(39,39,39,0.6),transparent);
     z-index: 100;
 }
-.nav-logo p{
-    color: white;
-    font-size: 25px;
-    font-weight: 600;
-}
-.nav-menu ul{
-    display: flex;
-}
-.nav-menu ul li{
-    list-style-type: none;
-}
-.nav-menu ul li a{
-    text-decoration: none;
-    font-weight: 500;
-    color: #fff;
-    padding-bottom: 15px;
-    margin: 0 25px;
-}
-a:hover, .active{
-    border-bottom: 2px solid #fff;
-
-}
-.nav-button .btn{
-    width: 130px;
-    height: 40px;
-    font-weight: 500;
-    background: rgba(255,255 ,255 ,0.4 );
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: .3s ease;
-}
-
 .btn:hover{
     background: rgba(255,255 ,255 ,0.3 ); 
 }
@@ -190,39 +156,3 @@ header{
 
 
 
-
-
-
-@media only screen and (max-width: 768px) {
-    .nav-menu {
-        display: none;
-    }
-    
-    .nav-menu-btn {
-        display: block;
-    }
-    
-    .nav-menu.responsive {
-        display: block;
-    }
-    
-    .nav-menu.responsive ul {
-        flex-direction: column;
-        position: absolute;
-        top: 100px;
-        left: 0;
-        width: 100%;
-        background-color: rgba(39,39,39,0.6);
-        padding-top: 20px;
-    }
-    
-    .nav-menu.responsive ul li {
-        text-align: center;
-        margin: 0;
-    }
-    
-    .nav-menu.responsive ul li a {
-        padding: 10px;
-        border-bottom: 1px solid #fff;
-    }
-}

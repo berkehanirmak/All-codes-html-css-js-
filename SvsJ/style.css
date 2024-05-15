@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.product-container {
+    margin: 150px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px; 
+}
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 250px; 
+    transition: transform 0.3s ease;
+}
+.product:hover{
+    transform: scale(1.1);
+}
+.product img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product h3 {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+.product p {
+    font-size: 1em;
+    margin-top: 5px;
+}

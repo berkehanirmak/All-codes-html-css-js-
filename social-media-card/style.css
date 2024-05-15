@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+:root{
+    --first-color:hsl(230,100%,50%);
+    --second-color:hsl(150,100%,38%);
+    --title-color:hsl(230,24%,12%);
+    --text-color:hsl(230,4%,%60);
+    --gray-color:hsl(230,4%,88%);
+    --border-color:hsl(230,4%,92%);
+    --body-color:hsl(230,100%,98%);
+    --container-color:hsl(0,0%,100%);
+    --body-font:"Syne",sans-serif;
+    --h2-font-size:1.25rem;
+    --normal-font-size:1rem;
+
+}
+
+/*card*/
+.container{
+    height: 60vh;
+    display: grid;
+    place-items: center;
+    margin-inline: 1.5rem;
+    padding-block: 7rem;
+}
+
+.card-article{
+    position: relative;
+    align-self: flex-end;
+    display: flex;
+    justify-content: center;
+}
+.card-profile,
+.card-mask{
+    width: 100px;
+    height: 100px;
+    background-color: var(--gray-color);
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.card-profile img,
+.card-mask img{
+    width: 100px;
+}
+.card-profile{
+    border: 4px solid var(--container-color);
+    z-index: 5;
+    transition: opacity .4s, transform .4s;
+}
+.card-tooltip{
+    position: absolute;
+    bottom: -2rem;
+    padding-bottom: 5rem;
+    transition: opacity .4s,bottom .4s cubic-bezier(.6,-.5,.3,1.5);
+    pointer-events: none;
+    opacity: 0;
+}
+.card-content{
+    position: relative;
+    width: calc(18vw - 3rem); /* boşluk eklendi */
+    background-color: var(--container-color);
+    box-shadow: 0 16px 32px hsla(230, 50%, 20%,.1) ;
+    padding: 2rem 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.card-content::after{
+    content: '';
+    width: 32px;
+    height: 32px;
+    background-color: var(--container-color);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -.75rem;
+    margin-inline: auto;
+    border-radius: .25rem;
+    rotate: 45deg;
+
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+.card-header span{
+    color: #1c1c25;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}
+.card-social{
+    display: flex;
+    column-gap: .75rem;
+}
+.card-social a{
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: var(--title-color);    
+    text-decoration: none;
+
+}
+.card-social i{
+    color: rgb(29, 11, 168);
+}
+.card-image{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    margin: 0 auto 1rem;
+}
+.card-status{
+    width: 12px;
+    height: 12px;
+    background-color: var(--second-color);
+    position: absolute;
+    top: .5rem;
+    right: .75rem;
+    border-radius: 50%;
+    border: 2px solid var(--container-color);
+}
+.card-data{
+    text-align: center;
+}
+.card-name{
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    font-weight: 600;
+    margin-bottom: .25rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.card-profession{
+   font-size: var(--normal-font-size);
+   color: #ababab;
+   font-weight: 500;
+   margin-bottom: 2rem;
+   font-family: Arial, Helvetica, sans-serif;
+}
+.card-button{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    column-gap: .5rem;
+    color: var(--first-color);
+    font-weight:500 ;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.card-button i{
+    font-size: 1.25rem;
+
+}
+
+.card-article:hover .card-profile{
+ 
+    transform: scale(.8);
+    opacity: .7;
+}
+
+.card-article:hover .card-tooltip{
+    opacity: 1;
+    pointer-events: initial;
+    bottom: 4rem;
+}

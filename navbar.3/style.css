@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald',sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #434750;
+}
+ul{
+    position: relative;
+    transform: skewY(-15deg);
+}
+ul li{
+    position: relative;
+    list-style: none;
+    width: 200px;
+    background:#3e3f46;
+    padding: 15px;
+    z-index: var(--i);
+    transition: 0.5s;
+
+}
+ul li:hover{
+  transform: translateX(-50px);
+
+}
+ul #one:hover {
+    background: rgb(134, 2, 134);
+}
+ul #two:hover {
+    background: rgb(8, 26, 191);
+}
+ul #three:hover {
+    background: rgb(6, 135, 6) ;
+}
+ul #four:hover {
+    background: rgb(209, 209, 9);
+}
+ul #fife:hover {
+    background: rgb(203, 61, 9);
+}
+ul #six:hover {
+    background: rgb(201, 13, 13);
+}
+
+
+ul #six:hover::before{
+    background: rgb(121, 10, 10);
+}
+ul #fife:hover::before{
+    background: rgb(122, 53, 28);
+}
+ul #four:hover::before{
+    background: rgb(115, 115, 8);
+}
+ul #three:hover::before{
+    background: rgb(17, 74, 17);
+}
+ul #two:hover::before{
+    background: rgb(8, 8, 90);
+}
+ul #one:hover::before{
+    background: rgb(61, 4, 61);
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    width: 40px;
+    left: -40px;
+    top: 0;
+    height: 100%;
+    background:#2e3133;
+    transform-origin: right;
+    transform: skewY(45deg);
+    transition: 0.5s;
+}
+ul li::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: -40px;
+    height: 40px;
+    background:#35383e;
+    transform-origin: bottom;
+    transform: skewX(45deg);
+    transition: 0.5s;
+}
+
+ul #six:hover::after{
+    background: rgb(162, 9, 9);
+}
+ul #fife:hover::after{
+    background:rgb(148, 52, 13);
+}
+ul #four:hover::after{
+    background: rgb(161, 161, 25);
+}
+ul #three:hover::after{
+    background:rgb(22, 123, 22) ;
+}
+ul #two:hover::after{
+    background:rgb(19, 19, 146) ;
+}
+ul #one:hover::after{
+    background:rgb(91, 12, 91) ;
+}
+ul li a{
+    text-decoration: none;
+    color: #999;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: 0.5s;
+}
+ul li:hover a{
+    color: #fff;
+
+}
+ul li:last-child::after{
+    box-shadow: -120px 120px 20px rgb(0,0,0,0.75) ;
+}
