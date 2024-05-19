@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <img src="image1.jpg" class="img">
+        <img src="image2.jpg" class="img">
+        <img src="image3.jpg" class="img">
+        <img src="image4.jpg" class="img">
+        <img src="image5.jpg" class="img">
+        <img src="image6.jpg" class="img">
+    </div>
+    <script>
+        document.querySelectorAll('img').forEach((box,index,boxes)=>{
+            box.addEventListener('mouseover',()=>{
+                boxes.forEach((b,i)=>{
+                    let className=i<index? 'prev':i==index ? 'hovered' : 'next';
+                    b.classList.remove('prev','next','hovered',)
+                    b.classList.add(className)
+                })
+            })
+            box.addEventListener('mouseleave',()=>{
+                boxes.forEach((b)=>{
+                    b.classList.remove('prev','next','hovered')
+                })
+            })
+        })
+    </script>
+</body>
+</html>

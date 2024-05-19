@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    position: absolute;
+    inset: 0;
+}
+.container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.container img.a{
+ filter: brightness(2) grayscale(1);   
+}
+.container img.b{
+  mix-blend-mode: multiply;
+  filter:contrast(1.5)  brightness(1);
+}
+
