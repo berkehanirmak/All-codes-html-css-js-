@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;    
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #001f25;
+    flex-direction: column-reverse;
+}
+h2 {
+    position: relative;
+    font-size: 6em;
+    color: transparent;
+    -webkit-text-stroke: 2px #ff007f; 
+    line-height: 1em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+h2 span {
+    display: inline-flex;
+    transition: 0.5s ease-in-out;
+    filter: drop-shadow(0 0 15px #ff00ff); 
+}
+h2 span:nth-child(even) {
+    overflow: hidden;
+    letter-spacing: -1em;
+}
+
+h2:hover~ h2 span:nth-child(even),
+h2:hover span:nth-child(even) {
+    letter-spacing: 0;
+    color: #8a2be2; 
+}

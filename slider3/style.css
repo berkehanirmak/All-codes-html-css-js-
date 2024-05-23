@@ -1,0 +1,57 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.center {
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 450px;
+    width: 800px;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.images {
+    height: 100%;
+    width: 500%; 
+    display: flex;
+    transition: margin-left 0.6s ease;
+}
+
+.images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.images .slide {
+    width: 20%;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.buttons a {
+    height: 8px;
+    width: 30px;
+    border: 2px solid white;
+    margin: 0 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+a.active {
+    background: white;
+    transform: scale(0.8);
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Social Media Counters</title>
+</head>
+<body>
+    <div class="container">
+        <div class="icon fb">
+            <span class="fab fa-facebook-square"></span>
+            <div class="counter">
+                <div class="numb">1500</div>
+                <span class="plus">+</span>
+            </div>
+            <div class="text">Likes</div>
+        </div>
+        <div class="icon twitter">
+            <span class="fab fa-twitter-square"></span>
+            <div class="counter">
+                <div class="numb">2500</div>
+                <span class="plus">+</span>
+            </div>
+            <div class="text">Followers</div>
+        </div>
+        <div class="icon insta">
+            <span class="fab fa-instagram-square"></span>
+            <div class="counter">
+                <div class="numb">3500</div>
+                <span class="plus">+</span>
+            </div>
+            <div class="text">Messages</div>
+        </div>
+        <div class="icon github">
+            <span class="fab fa-github-square"></span>
+            <div class="counter">
+                <div class="numb">2500</div>
+                <span class="plus">+</span>
+            </div>
+            <div class="text">Shares</div>
+        </div>
+        <div class="icon yt">
+            <span class="fab fa-youtube-square"></span>
+            <div class="counter">
+                <div class="numb">5000</div>
+                <span class="plus">+</span>
+            </div>
+            <div class="text">Subscribers</div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('.icon .counter .numb').counterUp({
+                delay: 20,
+                time: 1000
+            });
+            setTimeout(function() {
+                $('.icon .text').addClass("show");
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
