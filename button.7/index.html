@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/272a32f03d.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>Upload Button</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="center">
+        <button>
+            <p>DOWNLOAD FILE <i class="fa-solid fa-cloud-arrow-down"></i></p>
+            <div class="loading"></div>
+            <i class="fa fa-check"></i>
+        </button>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('button').click(function () {
+                var $button = $(this);
+                $button.parent().addClass('active');
+                setTimeout(function () {
+                    $button.addClass('success');
+                }, 2700);
+                setTimeout(function () {
+                    $button.parent().removeClass('active');
+                    $button.removeClass('success');
+                }, 4000);
+            });
+        });
+    </script>
+</body>
+</html>

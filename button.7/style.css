@@ -1,0 +1,84 @@
+body {
+    background: #e9fcfc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    position: relative;
+    width: 310px;
+    height: 60px;
+    border: none;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #3d42c2, #373bae, #31349b);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #4a4ed1, #4145bd, #383ca8);
+}
+
+button p {
+    margin: 0;
+    z-index: 1;
+    transition: opacity 0.3s;
+}
+
+.loading, .fa-check {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #3d42c2, #373bae, #31349b);
+    z-index: 0;
+    transition: width 2.7s ease;
+}
+
+.fa-check {
+    color: white;
+    font-size: 24px;
+    transform: scale(0);
+    transition: transform 0.3s;
+}
+
+.active button {
+    background: #d9d9d9;
+}
+
+.active button p {
+    opacity: 0;
+}
+
+.active .loading {
+    width: 100%;
+}
+
+.success .fa-check {
+    transform: scale(1);
+}
