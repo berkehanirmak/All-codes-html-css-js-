@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <div class="spinner">
+            <span id="output">0</span>
+            <div class="progress">
+                <span id="meter"></span>
+            </div>
+            <div class="btn plus" onclick="plus();">+</div>
+            <div class="btn minus" onclick="minus();">-</div>
+        </div>
+    </div>
+    <script>
+        let x = 0;
+        let output = document.getElementById('output');
+        let meter = document.getElementById('meter');
+        output.innerHTML = x;
+
+        function updateMeter() {
+            if (x <= 4) {
+                meter.style.background = "#0f0";
+                meter.style.filter = "drop-shadow(0 0 2.5px #0f0) drop-shadow(0 0 10px #0f0)";
+            } else if (x <= 8) {
+                meter.style.background = "#ffa500";
+                meter.style.filter = "drop-shadow(0 0 2.5px #ffa500) drop-shadow(0 0 10px #ffa500)";
+            } else {
+                meter.style.background = "#f00";
+                meter.style.filter = "drop-shadow(0 0 2.5px #f00) drop-shadow(0 0 10px #f00)";
+            }
+        }
+
+        function plus() {
+            if (x >= 10) {
+                return false;
+            }
+            output.innerHTML = ++x;
+            meter.style.height = x * 10 + '%';
+            updateMeter();
+        }
+
+        function minus() {
+            if (x <= 0) {
+                return false;
+            }
+            output.innerHTML = --x;
+            meter.style.height = x * 10 + '%';
+            updateMeter();
+        }
+
+        updateMeter();
+    </script>
+</body>
+</html>

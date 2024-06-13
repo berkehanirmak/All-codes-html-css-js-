@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #09383e;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    transform-style: preserve-3d;
+    perspective: 1500px;
+    transform: perspective(2000px);
+    transition: 1s;
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.15), 0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card:hover {
+    transform: perspective(2000px) translateX(50%);
+    box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.15);
+}
+
+.card .cover {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    overflow: hidden;
+    transition: 1s ease-in-out;
+    transform-origin: left;
+}
+
+.card:hover .cover {
+    transform: rotateY(-180deg);
+}
+
+.card .cover img {
+    max-width: 140%;
+    z-index: 1;
+}
+
+.card .cover::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 150%;
+    background: #fff;
+    transform: rotate(36.5deg);
+    box-shadow: 0 0 0 20px #47bfce;
+    transition: 0.5s;
+    transition-delay: 1s;
+}
+
+.card:hover .cover::before {
+    width: 0;
+    box-shadow: 0 0 0 250px #e8e80c;
+    transform: rotate(143.5deg);
+}
+
+.card .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    text-align: center;
+}
+
+.card .details .product-info {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    transform: rotateY(0deg);
+}
+
+.card:hover .details .product-info {
+    opacity: 1;
+}
+.card .details img{
+    max-width: 200px;
+}
+
+.card .details h3 {
+    font-weight: 500;
+    margin: 5px 0;
+}
+
+.card .details h2 {
+    font-size: 1.5em;
+    color: #e82a5b;
+    font-weight: 600;
+}
+
+.card .details a {
+    display: inline-block;
+    padding: 8px 20px;
+    background: #45bfce;
+    color: #fff;
+    margin-top: 5px;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    font-weight: 500;
+    text-decoration: none;
+}

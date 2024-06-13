@@ -1,0 +1,56 @@
+body {
+    background: linear-gradient(90deg, rgba(46,44,45,1) 0%, rgba(66,64,67,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3em;
+    max-width: 24em; 
+}
+
+.btn {
+    position: relative;
+    width: 7em;
+    height: 7em;
+    border-radius: 50%;
+    outline: none;
+    border: 4px #090909 solid;
+    background: linear-gradient(145deg, #171717, #444245);
+    box-shadow: inset 2px 2px 0px #7d7c7e;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.btn span {
+    font-size: 2.9em;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: inherit;
+    background: linear-gradient(145deg, #262626, #606060);
+    width: 7.25em;
+    height: 7.25em;
+    z-index: -1;
+    box-shadow: 11px 11px 22px #141414, -11px -11px 22px #525252;
+}
+
+.button-clicked {
+    background: linear-gradient(-185deg, #131313, #444245);
+    box-shadow: inset -2px -2px 0px #5e5e5e, inset 2px 2px 0px #1c1c1c;
+}
+
+.icon-clicked {
+    color: cyan;
+}

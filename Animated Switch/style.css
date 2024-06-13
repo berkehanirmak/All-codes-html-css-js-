@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #474b4b;
+    transition: background 0.5s;
+}
+body.active {
+    background: #1f1f1f;
+}
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.container .box {
+    position: relative;
+    width: 100px;
+    height: 40px;
+    background: #fff;
+    cursor: pointer;
+    filter: drop-shadow(0 0 10px #22e204) drop-shadow(0 0 30px #7e7e7e);
+    transition: background 0.5s, transform 0.5s, filter 0.5s;
+}
+.container .box::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border: 1px solid #22e204;
+    transition: border-color 0.5s;
+}
+.container .box span {
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    background: #22e204;
+    pointer-events: none;
+    transition: 0.2s ease-in-out, background 0.5s, transform 0.5s;
+}
+
+.container .box.active {
+    background: #444;
+    transform: rotate(0deg) ;
+    filter: drop-shadow(0 0 20px #ff7e7e) drop-shadow(0 0 40px #ff7e7e);
+}
+.container .box.active::before {
+    border-color: #ff7e7e;
+}
+
+
+
+.container .box.active span {
+    background: #ff7e7e;
+    transform: translateX(60px) rotate(0deg) ;
+}
