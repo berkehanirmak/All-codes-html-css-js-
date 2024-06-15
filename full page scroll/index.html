@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS still goes here for simplicity */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 400vh;
+            background: #222;
+        }
+        .scrollIndicator {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .scrollIndicator::before {
+            content: '';
+            position: absolute;
+            inset: 15px;
+            background: #222;
+            z-index: -1;
+        }
+        .text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        #textValue {
+            z-index: 1;
+            text-align: center;
+            color: #fff;
+            font-size: 8em;
+            display: flex;
+            align-items: center;
+            line-height: 1em;
+        }
+        #textValue span {
+            font-size: 0.5em;
+        }
+        .text small {
+            color: #fff;
+            font-size: 2em;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="scrollIndicator">
+        <div class="text">
+            <h2 id="textValue"></h2>
+            <small>Page Scrolled</small>
+        </div>
+    </div>
+    <script>
+        // JavaScript still goes here for simplicity
+        let indicator = document.querySelector('.scrollIndicator'); // corrected selector
+        let textValue = document.getElementById('textValue');
+        let maxHeight = document.documentElement.scrollHeight - window.innerHeight;
+        
+        window.addEventListener('scroll', () => {
+            let scrollRatio = window.scrollY / maxHeight;
+            let angle = scrollRatio * 360;
+            let percent = Math.round(scrollRatio * 100);
+            indicator.style.background = `conic-gradient(from 0deg, #008eff 0%, #f00 ${angle}deg, #000 ${angle}deg)`;
+            textValue.innerHTML = percent + '<span>%</span>';
+        });
+    </script>
+</body>
+</html>
