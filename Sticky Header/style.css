@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+section{
+    position: relative;
+    min-height: 100vh;
+    background: var(--clr);
+}
+header{
+    position: relative;
+    width: 100%;
+}
+section .box{
+    position: relative;
+    min-height: 92vh;
+    background: var(--clr);
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    background: var(--clr);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px ;
+    color: #fff;
+}
+header .logo{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.5em;
+    padding: 10px;
+}
+header nav a{
+    text-decoration: none;
+    color: #fff;
+    padding: 15px 10px ;
+}

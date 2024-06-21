@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Scroll Background Change</title>
+</head>
+<body>
+    <div class="box">
+        <h2>Scroll To Change Background</h2>
+    </div>
+    <script>
+        const box = document.querySelector('.box');
+        const images = ['p2.jpg', 'p3.jpg', 'p4.jpg', 'p6.jpg', 'p7.jpg'];
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            const viewportHeight = window.innerHeight;
+            const imageIndex = Math.floor((scrollPosition / viewportHeight) % images.length);
+
+            box.style.backgroundImage = `url(${images[imageIndex]})`;
+        });
+    </script>
+</body>
+</html>
