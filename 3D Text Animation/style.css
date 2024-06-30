@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+    overflow: hidden;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+.container .box{
+    transform-style: preserve-3d;
+    animation: animate 25s linear infinite;
+}
+@keyframes animate{
+    0%{
+        transform: perspective(1000px) rotateX(0deg) rotate(25deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateX(360deg) rotate(25deg);
+    }
+}
+
+.container .box span{
+    position: absolute;
+    color: #1549cd;
+    font-size: 3.5em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 0 10px ;
+    background: linear-gradient(90deg, transparent,rgb(0,0,0,0.5) transparent);
+    line-height: 0.76em;
+    transform-style: preserve-3d;
+    text-shadow: 0 5px 15px rgb(0.0.0.0.25);
+    transform: translate(-50%,-50%) rotateX(calc(var(--i)*22.5deg)) translateZ(106px);
+}
+
+
+
+.container .box span i:nth-child(1){
+    font-style: initial;
+    color: orangered;
+}
+.container .box span i:nth-child(2){
+    font-style: initial;
+    color: white;
+}
+.container .box span i:nth-child(3){
+    font-style: initial;
+    color: yellow;
+}
+.container .box span i:nth-child(4){
+    font-style: initial;
+    color: white;
+}
+.container .box span i:nth-child(5){
+    font-style: initial;
+    color: turquoise;
+}
+.container .box span i:nth-child(6){
+    font-style: initial;
+    color: rgb(181, 194, 181);
+}

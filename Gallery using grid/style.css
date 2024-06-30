@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+.container {
+    position: relative;
+    display: grid;
+    grid-gap: 15px;
+    width: 600px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 150px 150px 150px 150px;
+    grid-template-areas: 
+        "img1 img3 img4" 
+        "img1 img3 img6"
+        "img2 img3 img6"
+        "img2 img5 img5";
+}
+
+.container .img1 {
+    grid-area: img1;
+}
+.container .img2 {
+    grid-area: img2;
+}
+.container .img3 {
+    grid-area: img3;
+}
+.container .img4 {
+    grid-area: img4;
+}
+.container .img5 {
+    grid-area: img5;
+}
+.container .img6 {
+    grid-area: img6;
+}
+.container .item {
+    position: relative;
+}
+.container .item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+.container:hover .item img:not(:hover) {
+    filter: grayscale(1);
+    opacity: 0.5;
+}

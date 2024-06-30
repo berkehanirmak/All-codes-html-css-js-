@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #111;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.sphere {
+    transform-style: preserve-3d;
+    animation: rotateSphere 20s linear infinite;
+}
+
+@keyframes rotateSphere {
+    0% {
+        transform: perspective(1000px) rotateX(0deg) rotateY(25deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateX(360deg) rotateY(25deg);
+    }
+}
+
+
+.sphere span {
+    position: absolute;
+    color: #fff;
+    font-size: 2em;
+    white-space: nowrap;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0 10px;
+    background: linear-gradient(90deg, transparent, rgba(0,0,0,0.5), transparent);
+    transform-style: preserve-3d;
+    text-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    transform: translate(-50%, -50%) rotateX(calc(var(--i) * 22.5deg)) translateZ(200px);
+}
+
+
+.sphere span:nth-child(odd) {
+    color: #ff6f61;
+}
+
+.sphere span:nth-child(even) {
+    color: #6bc1ff;
+}

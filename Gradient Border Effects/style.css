@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+.box {
+    position: relative;
+    width: 400px;
+    height: 300px;
+}
+.box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--a), #0f0, #ff0, #0ff, #f0f, #0ff);
+    border-radius: 20px;
+    animation: rotating 4s linear infinite;
+}
+.box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--a), #0f0, #ff0, #0ff, #f0f, #0ff);
+    animation: rotating 4s linear infinite;
+    filter: blur(40px);
+    opacity: 0.75;
+}
+.box span {
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    border-radius: 16px;
+    z-index: 1;
+}
+.inner-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 200px;
+}
+.inner-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--b), #ff0, #0f0, #f0f, #0ff, #f0f);
+    border-radius: 15px;
+    animation: rotating 6s linear infinite reverse;
+}
+
+.inner-box::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-conic-gradient(from var(--b), #ff0, #0f0, #f0f, #0ff, #f0f);
+    animation: rotating 6s linear infinite reverse;
+    filter: blur(30px);
+    opacity: 0.75;
+}
+
+
+.inner-box span {
+    position: absolute;
+    inset: 4px;
+    background: #222;
+    border-radius: 12px;
+    z-index: 1;
+}
+@property --a {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+@property --b {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0deg;
+}
+@keyframes rotating {
+    0% {
+       --a: 0deg;
+       --b: 0deg;
+    }
+    100% {
+        --a: 360deg;
+        --b: 360deg;
+    }
+}
