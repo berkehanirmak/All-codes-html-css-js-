@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.container {
+    width: 400px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background: #fff;
+    padding: 0 5px;
+    color: #aaa;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.input-field input:focus + label,
+.input-field input:valid + label {
+    top: -10px;
+    left: 5px;
+    color: #9b59b6;
+    font-size: 14px;
+}
+
+.links {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.links a {
+    color: #9b59b6;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #9b59b6;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #8e44ad;
+}

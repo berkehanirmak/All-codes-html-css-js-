@@ -1,4 +1,2 @@
-let arr = [1, 2, 3];
-console.log(arr.length);
-arr[5] = 5;
-console.log(arr.length);
+const array = [2, 3, 4].splice(1, 1);
+console.log(array);

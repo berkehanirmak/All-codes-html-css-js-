@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: radial-gradient(circle, #1e3c72, #2a5298);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .loader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #fff;
+        }
+
+        .ring {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: conic-gradient(#00ff99, #00ff99 25%, transparent 25%, transparent 50%, #3498db 50%, #3498db 75%, transparent 75%);
+            animation: rotate 1.5s linear infinite;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+
+        .ring:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            background: #1e3c72;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        span {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            animation: fade 1.5s ease-in-out infinite;
+        }
+        @keyframes fade {
+            50% { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="ring"></div>
+        <span>Loading...</span>
+    </div>
+</body>
+</html>

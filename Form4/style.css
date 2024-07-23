@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signup-form h2 {
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    position: relative;
+}
+
+.signup-form h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background: #fff;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+}
+
+.input-field {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 15px 10px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.input-field input:focus {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+.input-field label {
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-field input:focus + label,
+.input-field input:valid + label {
+    top: -10px;
+    left: 10px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.input-field .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.input-field .toggle-password:hover {
+    color: #667eea;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background: #0d2799;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: #5563c1;
+    transform: scale(1.05);
+}
+
+.links {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #ddd;
+}

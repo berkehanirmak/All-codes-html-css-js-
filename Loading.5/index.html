@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading Animation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #282c34;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .loader {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #61dafb;
+        }
+        .bars {
+            display: flex;
+            justify-content: space-between;
+            width: 80px;
+            height: 40px;
+        }
+        .bars div {
+            width: 10px;
+            height: 100%;
+            background: #61dafb;
+            animation: bounce 1.2s infinite ease-in-out;
+        }
+
+
+        .bars div:nth-child(1) {
+            animation-delay: -1.2s;
+        }
+        .bars div:nth-child(2) {
+            animation-delay: -1.1s;
+        }
+        .bars div:nth-child(3) {
+            animation-delay: -1s;
+        }
+        .bars div:nth-child(4) {
+            animation-delay: -0.9s;
+        }
+        .bars div:nth-child(5) {
+            animation-delay: -0.8s;
+        }
+
+        
+        @keyframes bounce {
+            0%, 40%, 100% {
+                transform: scaleY(0.4);
+            }
+            20% {
+                transform: scaleY(1.0);
+            }
+        }
+        span {
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <div class="bars">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <span>Loading...</span>
+    </div>
+</body>
+</html>

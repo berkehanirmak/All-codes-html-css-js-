@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="#" data-color="#08ff21">Home</a>
+        <a href="#" data-color="#2196F3">About</a>
+        <a href="#" data-color="#FF9800">Portfolio</a>
+        <a href="#" data-color="#FF5722">Team</a>
+        <a href="#" data-color="#9C27B0">Contact</a>
+        <div id="marker"></div>
+    </nav>
+    <script>
+        let marker = document.querySelector('#marker');
+        let item = document.querySelectorAll('nav a');
+
+        function indicator(e){
+            marker.style.left = e.offsetLeft + 'px';
+            marker.style.width = e.offsetWidth + 'px';
+            marker.style.borderBottomColor = e.dataset.color;
+            marker.style.filter = `drop-shadow(0 5px 25px ${e.dataset.color})`;
+        }
+        
+        item.forEach(link => {
+            link.addEventListener('click', (e) => {
+                indicator(e.target);
+            });
+        });
+    </script>
+</body>
+</html>
