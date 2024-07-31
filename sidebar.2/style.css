@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.5;
+    background: #f0f0f0;
+}
+
+.btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    background: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn:hover {
+    background: #e64a19;
+    transform: scale(1.1);
+}
+
+.btn span {
+    font-size: 30px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background: #3f51b5;
+    color: #fff;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.sidebar.show {
+    left: 0;
+}
+
+.sidebar .text {
+    padding: 20px;
+    color: #f0f0f0;
+    font-size: 26px;
+    font-weight: 600;
+    border-bottom: 1px solid #2c387e;
+    text-align: center;
+    background: #283593;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    border-bottom: 1px solid #2c387e;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 25px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li.active a {
+    background: #5c6bc0;
+    color: #fff;
+}
+
+nav ul ul {
+    display: none;
+}
+
+nav ul li.active > ul {
+    display: block;
+}
+
+nav ul ul li a {
+    padding-left: 50px;
+    font-size: 18px;
+    background: #3949ab;
+    color: #fff;
+}
+
+nav ul ul li a:hover {
+    background: #303f9f;
+}
+
+nav ul li a span {
+    float: right;
+    transition: transform 0.3s ease;
+}
+
+nav ul li.active > a span {
+    transform: rotate(180deg);
+}

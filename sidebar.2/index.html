@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Colorful Sidebar</title>
+</head>
+<body>
+    <div class="btn">
+        <span class="fas fa-bars"></span>
+    </div>
+    <nav class="sidebar">
+        <div class="text">Menu</div>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li>
+                <a href="#" class="feat-btn">Features
+                    <span class="fas fa-caret-down"></span>
+                </a>
+                <ul>
+                    <li><a href="#">Pages</a></li>
+                    <li><a href="#">Elements</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#" class="serv-btn">Services
+                    <span class="fas fa-caret-down"></span>
+                </a>
+                <ul>
+                    <li><a href="#">App Design</a></li>
+                    <li><a href="#">Web Design</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Shortcuts</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </nav>
+    <script>
+        $('.btn').click(function(){
+            $(this).toggleClass('click');
+            $('.sidebar').toggleClass('show');
+        });
+        $('.feat-btn').click(function(){
+            $(this).parent().toggleClass('active');
+            $(this).siblings('ul').slideToggle();
+        });
+        $('.serv-btn').click(function(){
+            $(this).parent().toggleClass('active');
+            $(this).siblings('ul').slideToggle();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #282c34;
+    overflow: hidden;
+}
+
+.box-container {
+    display: flex;
+    gap: 20px;
+}
+
+.box {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background: #61dafb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: #282c34;
+    font-weight: bold;
+    animation: fall 4s ease-in-out infinite;
+    animation-delay: calc(0.5s * var(--i));
+    border-radius: 10px;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(10vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}

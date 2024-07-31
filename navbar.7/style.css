@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #282c34;
+}
+
+.menu-container {
+    position: relative;
+    width: 200px;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    position: relative;
+    margin: 10px 0;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    text-align: center;
+    padding: 15px;
+    background-color: #444;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.menu li a:hover {
+    background-color: #555;
+}
+
+.menu li:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.menu li:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.menu li:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.menu li:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.menu li:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.menu-container:hover .menu li {
+    opacity: 1;
+    transform: translateY(0);
+}

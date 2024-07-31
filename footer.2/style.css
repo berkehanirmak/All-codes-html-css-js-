@@ -1,0 +1,100 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.footer {
+    background: linear-gradient(135deg, #1f1f1f 0%, #2c2c2c 100%);
+    color: #f5f5f5;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.footer-logo h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #00aaff; /* Bright blue for the logo */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.footer-links {
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    color: #f5f5f5;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    font-weight: 500;
+    transition: color 0.3s;
+    position: relative;
+}
+
+.footer-links a::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 0;
+    background: #00aaff;
+    transition: width 0.3s;
+}
+
+.footer-links a:hover::after {
+    width: 100%;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 20px;
+}
+
+.footer-social {
+    margin-bottom: 20px;
+}
+
+.footer-social .social-icon {
+    font-size: 30px;
+    color: #f5f5f5;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.footer-social .social-icon:hover {
+    color: #00aaff; /* Bright blue for hover effect */
+    transform: scale(1.2); /* Slightly increase the size on hover */
+}
+
+.footer-social .social-icon.facebook:hover i {
+    color: #3b5998; /* Facebook blue */
+}
+
+.footer-social .social-icon.twitter:hover i {
+    color: #1da1f2; /* Twitter blue */
+}
+
+.footer-social .social-icon.instagram:hover i {
+    color: #e4405f; /* Instagram pink */
+}
+
+.footer-social .social-icon.linkedin:hover i {
+    color: #0077b5; /* LinkedIn blue */
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
