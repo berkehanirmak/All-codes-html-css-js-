@@ -1,4 +1,8 @@
-function calculate(a, b) {
-  return a + b;
-}
-console.log(calculate(11, "11"));
+const obj = {
+  name: "Alice",
+  greet: function () {
+    console.log(this.name);
+  },
+};
+const greet = obj.greet;
+greet();

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2ecc71;
+    --text-color: #333;
+    --background-color: #fff;
+    --border-color: #eaeaea;
+    --font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ecf0f1;
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.card {
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 320px;
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card-header {
+    padding: 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+}
+
+.card-img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+}
+
+.card-name {
+    margin: 10px 0 5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-profession {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-description {
+    margin: 0 0 20px;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.card-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.card-button i {
+    margin-right: 10px;
+}
+
+.card-button:hover {
+    background-color: var(--primary-color);
+}
+
+.card-footer {
+    padding: 20px;
+    background-color: var(--background-color);
+    border-top: 1px solid var(--border-color);
+}
+
+.card-social {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.card-social:hover {
+    color: var(--secondary-color);
+}

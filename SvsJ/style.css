@@ -1,36 +1,251 @@
+/* Resetting some default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.product-container {
-    margin: 150px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
-    gap: 20px; 
+
+/* Basic styling */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
 }
-.product {
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 20px;
-    width: 250px; 
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+header h1 {
+    font-size: 1.8rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+}
+
+main {
+    padding: 2rem;
+}
+
+/* Intro Section */
+.intro {
+    background-color: #fff;
+    padding: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.intro h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+/* Product Gallery */
+.product-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
     transition: transform 0.3s ease;
 }
-.product:hover{
-    transform: scale(1.1);
-}
-.product img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+
+.product-card:hover .product-image img {
+    transform: scale(1.04);
 }
 
-.product h3 {
-    font-size: 1.2em;
-    margin-top: 10px;
+.product-details {
+    padding: 1rem;
+    text-align: center;
 }
 
-.product p {
-    font-size: 1em;
-    margin-top: 5px;
+.product-details h3 {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.product-details p {
+    color: #1baf07;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #213847;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+/* Testimonial Section */
+.testimonial {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.testimonial h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.testimonial-card {
+    background-color: #f4f4f4;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.testimonial-card cite {
+    display: block;
+    margin-top: 0.5rem;
+    font-style: normal;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-links,
+.footer-contact,
+.footer-social {
+    width: 30%;
+}
+
+.footer-links ul,
+.footer-social ul {
+    list-style: none;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links ul li,
+.footer-social ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-links ul li a,
+.footer-social ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover,
+.footer-social ul li a:hover {
+    color: #f39c12;
+}
+
+.footer-contact p {
+    margin: 0.5rem 0;
+}
+
+.footer-social {
+    text-align: center;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    margin: 0 0.5rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icon:hover {
+    color: #f39c12;
 }
