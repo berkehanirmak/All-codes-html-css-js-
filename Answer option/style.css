@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: linear-gradient(to right, #74ebd5, #acb6e5);
     margin: 0;
     padding: 0;
@@ -22,7 +22,7 @@ body {
 h1 {
     text-align: center;
     margin-bottom: 20px;
-    color: #4a90e2;
+    color: #a82700;
     font-family: 'Arial', sans-serif;
     font-size: 28px;
 }
@@ -30,7 +30,14 @@ h1 {
 .question {
     margin-bottom: 20px;
     color: #333333;
-    font-size: 20px;
+    font-size: 25px;
+}
+.question p {
+  color: #7ec60c;
+  background-color: #000000;
+  padding: 10px;
+  border-radius: 10px;
+
 }
 
 .options {
@@ -56,7 +63,7 @@ h1 {
 
 .option:hover {
     background: #e0f2f1;
-    border-color: #4a90e2;
+    border-color: #30c313;
     cursor: pointer;
     transform: scale(1.02);
 }

@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+    transition: background 0.5s ease;
+    overflow: hidden;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 200px;
+    height: 80px;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.toggle-switch label {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #e80606ed;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: background 0.5s ease;
+}
+
+.toggle-switch .knob {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: left 0.5s ease, background 0.5s ease;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch .text {
+    position: absolute;
+    top: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.on-text {
+    left: 20px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.off-text {
+    right: 20px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.toggle-switch input:checked ~ label {
+    background: #4CAF50; /* Yeşil renk, ON durumu */
+}
+
+.toggle-switch input:checked ~ label .knob {
+    left: calc(100% - 70px);
+    background: #fff;
+}
+
+.toggle-switch input:checked ~ label .on-text {
+    opacity: 1;
+}
+
+.toggle-switch input:checked ~ label .off-text {
+    opacity: 0;
+}

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Product Page - Code Grammer Markt</title>
+</head>
+<body>
+    <header>
+        <div class="top-bar">
+            <div class="container">
+                <div class="logo">
+                    <h1>Code Grammer Markt</h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="What are you looking for?">
+                </div>
+                <div class="actions">
+                    <i class="fas fa-store"></i>
+                    <i class="fas fa-user"></i>
+                    <i class="fas fa-shopping-cart"></i>
+                </div>
+            </div>
+        </div>
+        <div class="menu-bar">
+            <div class="container">
+                <nav class="menu-right">
+                    <button id="categoriesBtn" class="menu-button">
+                        <i class="fas fa-bars"></i> All Categories
+                    </button>
+                </nav>
+                <nav class="menu-right">
+                    <a href="#">Campaigns</a>
+                    <a href="#">MediaMarkt CLUB</a>
+                    <a href="#">Corporate Sales</a>
+                    <a href="#">Customer Services</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <aside id="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-header">
+                <h2>Code Grammer Markt</h2>
+                <button id="closeSidebar">&times;</button>
+            </div>
+            <h3>All Categories</h3>
+            <ul>
+                <li>Phone ></li>
+                <li>Computer ></li>
+                <li>TV, Sound and Vision ></li>
+                <li>Accessory ></li>
+                <li>Photo & Camera & Drone ></li>
+                <li>White Goods ></li>
+                <li>Home Appliances & Living ></li>
+                <li>Personal Care & Health ></li>
+                <li>Sports & Games & Outdoor ></li>
+                <li>Brands ></li>
+                <li>Insurance and Additional Services ></li>
+                <li>Mediatrend ></li>
+            </ul>
+        </div>
+    </aside>
+
+    <main>
+        <section class="breadcrumbs">
+            <a href="#">Home</a> > <a href="#">Apple Watch</a> > <a href="#">Apple Watch Series 9</a>
+        </section>
+
+        <section class="product-page">
+            <div class="product-images">
+                <img src="1.jpg" alt="Main Product Image" id="mainImage">
+                <div class="thumbnails">
+                    <img src="1.jpg" alt="Thumbnail 1" onclick="changeImage('1.jpg')">
+                    <img src="2.jpg" alt="Thumbnail 2" onclick="changeImage('2.jpg')">
+                    <img src="3.jpg" alt="Thumbnail 3" onclick="changeImage('3.jpg')">
+                    <img src="4.jpg" alt="Thumbnail 4" onclick="changeImage('4.jpg')">
+                </div>
+            </div>
+            <div class="product-info">
+                <h2>APPLE Watch Series 9 GPS</h2>
+                <p class="price">$ 2.499,-</p>
+                <p>VAT included, free shipping</p>
+
+                <div class="product-options">
+                    <div class="option">
+                        <h3>Color</h3>
+                        <div class="choices">
+                            <button class="option-button">Starlight</button>
+                            <button class="option-button">Midnight</button>
+                            <button class="option-button">Red</button>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <h3>Band Size</h3>
+                        <div class="choices">
+                            <button class="option-button">S/M</button>
+                            <button class="option-button">M/L</button>
+                            <button class="option-button">Sport</button>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <h3>Case Size</h3>
+                        <div class="choices">
+                            <button class="option-button">45 mm</button>
+                            <button class="option-button">41 mm</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="availability">
+                    <p>In stock</p>
+                    <p>Estimated delivery 20.08.2024 - 21.08.2024</p>
+                </div>
+
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h3>Concept Pages</h3>
+                <ul>
+                    <li>School Shopping</li>
+                    <li>New Year Gifts</li>
+                    <li>Barista CLUB</li>
+                    <li>Father's Day</li>
+                    <li>Report Card Day Gifts</li>
+                    <li>Refurbished Phones</li>
+                    <li>Bring the Old, Get the New</li>
+                    <li>Device Rental Service</li>
+                    <li>Gamezone</li>
+                    <li>Wedding Packages</li>
+                    <li>Cleaning World</li>
+                    <li>Mother's Day</li>
+                    <li>Black Friday</li>
+                    <li>Cyber Monday</li>
+                    <li>New Year Gifts</li>
+                    <li>11 November Discounts</li>
+                    <li>Photo Concept</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Secure Shopping</h3>
+                <ul>
+                    <li>Information Society Services</li>
+                    <li>e-Archive Invoice Inquiry</li>
+                    <li>Help</li>
+                    <li>Corporate Sales</li>
+                    <li>Non-member Shopping Tracking</li>
+                    <li>Easy Returns</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Personal Data Protection and Privacy</h3>
+                <ul>
+                    <li>Personal Data Information</li>
+                    <li>Cookie Clarification Text</li>
+                    <li>KVK Processing Policy</li>
+                    <li>Data Subject Application Form</li>
+                    <li>Security Vulnerability Notification Program</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Corporate</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Sustainability</li>
+                    <li>Human Resources</li>
+                    <li>General Directorate</li>
+                    <li>Customer Services</li>
+                    <li>Newsletter Subscription</li>
+                    <li>Startup Challenge</li>
+                    <li>Mediatrend</li>
+                </ul>
+            </div>
+        </div>
+        <div class="store-locator">
+            <h3>Our Stores</h3>
+            <p>Find the Nearest Store</p>
+        </div>
+        <div class="app-download">
+            <h3>Download the Code Grammer App</h3>
+            <div class="app-links">
+                <a href="#"><img src="appstore.png" alt="App Store"></a>
+                <a href="#"><img src="logo.png" alt="Google Play"></a>
+                <a href="#"><img src="appgallery.png" alt="App Gallery"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="privacy-settings">
+                <a href="#">Privacy Settings</a>
+            </div>
+            <p>Code Grammer Markt – Leading Electronics Market Chain
+
+                With over 50 years of experience, Code Grammer Markt is part of the Code Grammer Retail Group, serving an average of 2.5 billion visitors annually across more than 1,000 stores in 13 countries with over 50,000 employees. Code Grammer Markt offers world-renowned brands to its customers with German expertise and competitive prices. As Europe’s number one electronics retailer, Code Grammer Markt provides top-quality pre- and post-sales services, welcoming its customers with excellence. The company opened its first store in Turkey in September 2007 in Istanbul, Ümraniye. In 2013, it launched its online sales channel, codegrammermarkt.com. With its omnichannel strategy, Code Grammer Markt integrates the numerous advantages of both physical and online retailing to offer a seamless experience to its customers. The company operates a total of 99 stores across Turkey, with 27 located in Istanbul, and others in cities such as Adana, Ankara, Antalya, Aydın, Balıkesir, Bursa, Çanakkale, Çorum, Denizli, Diyarbakır, Erzurum, Eskişehir, Gaziantep, Hatay, Isparta, Izmir, Izmit, Kahramanmaraş, Kayseri, Konya, Malatya, Mersin, Muğla, Sakarya, Samsun, Şanlıurfa, Tekirdağ, Trabzon, and Van.</p>
+        </div>
+    </footer>
+
+    <script>
+        function changeImage(image) {
+            document.getElementById('mainImage').src = image;
+        }
+
+        const categoriesBtn = document.getElementById('categoriesBtn');
+        const sidebar = document.getElementById('sidebar');
+        const closeSidebar = document.getElementById('closeSidebar');
+
+        categoriesBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        closeSidebar.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+        });
+
+        const optionButtons = document.querySelectorAll('.option-button');
+        optionButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const siblingButtons = this.parentNode.querySelectorAll('.option-button');
+                siblingButtons.forEach(sibling => {
+                    sibling.style.backgroundColor = '';
+                    sibling.style.color = '';
+                });
+
+                this.style.backgroundColor = '#d32f2f';
+                this.style.color = '#fff';
+            });
+        });
+    </script>
+</body>
+</html>

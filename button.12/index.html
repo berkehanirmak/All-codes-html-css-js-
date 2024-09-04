@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <a href="#">+ Document - 2022 </a>
+    <a href="#">+ Document - 2023 </a>
+    <a href="#">+ Document - 2024 </a>
+    
+    <script>
+        document.querySelectorAll('a').forEach(link=>{
+            link.innerHTML=link.innerText.split('').map((letters,i)=>{
+                if(letters===''){
+                    return ' ';
+                }
+                else{
+                    return `<span style="transition-delay:${i*30}ms">${letters}</span>`
+                }
+            }).join('')
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <h1>Welcome to Our Web Services</h1>
+            <p>Your solution to all web development needs</p>
+            <a href="#services" class="learn-more-button">Learn More</a>
+        </div>
+    </header>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-list">
+                <div class="service-item">
+                    <h3>Web Development</h3>
+                    <p>We create responsive and modern websites tailored to your needs.</p>
+                </div>
+                <div class="service-item">
+                    <h3>SEO Optimization</h3>
+                    <p>Boost your website's visibility on search engines with our expert SEO services.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Digital Marketing</h3>
+                    <p>Expand your reach with our comprehensive digital marketing strategies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Web Services. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelector('.learn-more-button').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.querySelector('#services').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        });
+    </script>
+</body>
+</html>

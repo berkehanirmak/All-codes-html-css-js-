@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #121212;
+    overflow: hidden;
+}
+
+.toggle-switch {
+    position: relative;
+    width: 150px;
+    height: 80px;
+}
+
+.toggle-switch input {
+    display: none;
+}
+
+.toggle-switch label {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    background: #333;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.toggle-switch .circle {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(145deg, #404040, #1c1c1c);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-switch label .circle i {
+    font-size: 24px;
+    color: #ffa500;
+    transition: 0.5s;
+}
+
+.toggle-switch input:checked ~ label .circle {
+    left: calc(100% - 70px);
+    background: linear-gradient(145deg, #ffbb33, #ff8800);
+    box-shadow: 0px 0px 20px #ff8800;
+}
+
+.toggle-switch input:checked ~ label .circle i {
+    color: #fff;
+}
+
+.toggle-switch .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.toggle-switch input:checked ~ label .background {
+    opacity: 1;
+}

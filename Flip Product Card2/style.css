@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header .top-bar {
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+header .logo {
+    flex: 1;
+}
+header .logo h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+header .search-bar {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+header .search-bar input {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    outline: none;
+}
+header .actions {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+header .actions i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+header .menu-bar {
+    background-color: #f8f8f8;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+
+
+header .menu-right {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+header .menu-right a {
+    color: #333;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+header .menu-right a:hover {
+    color: #d32f2f;
+}
+
+header .menu-bar .menu-button {
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+header .menu-bar .menu-button:hover {
+    background-color: #b71c1c;
+}
+
+#sidebar {
+    width: 300px;
+    background-color: #fff;
+    color: #333;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    height: 100%;
+    padding: 50px 20px;
+    transition: 0.3s;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-header h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #b71c1c;
+}
+
+.sidebar-header button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.sidebar-content h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.sidebar-content ul {
+    list-style: none;
+}
+
+.sidebar-content ul li {
+    margin: 15px 0;
+    cursor: pointer;
+    color: #333;
+}
+
+.sidebar-content ul li:hover {
+    color: #d32f2f;
+}
+
+.breadcrumbs {
+    font-size: 14px;
+    color: #666;
+    margin: 20px 50px;
+}
+
+.breadcrumbs a {
+    color: #d32f2f;
+    text-decoration: none;
+    margin-right: 5px;
+    transition: color 0.3s ease;
+}
+
+.breadcrumbs a:hover {
+    color: #b71c1c;
+    text-decoration: underline;
+}
+
+.breadcrumbs a::after {
+    content: '>';
+    margin-left: 5px;
+    color: #999;
+}
+
+.breadcrumbs a:last-child::after {
+    content: '';
+}
+
+.product-page {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 50px;
+}
+
+.product-images {
+    flex: 1;
+    max-width: 700px;
+    margin-left: 320px;
+}
+
+.product-images img#mainImage {
+    width: 67%;
+    height: 400px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.thumbnails {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.thumbnails img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+.product-info {
+    flex: 1;
+    margin-left: 50px;
+}
+
+.product-info h2 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.product-info .price {
+    font-size: 26px;
+    color: #d32f2f;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.product-options {
+    margin-bottom: 20px;
+}
+
+.product-options .option {
+    margin-bottom: 15px;
+}
+
+.product-options h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-options .choices button {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    margin-right: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.product-options .choices button:hover {
+    background-color: #ddd;
+}
+
+.availability {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+.add-to-cart {
+    background-color: #d32f2f;
+    color: #fff;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.add-to-cart:hover {
+    background-color: #b71c1c;
+}
+
+footer {
+    background-color: #b1b0b085;
+    color: #333;
+    font-size: 14px;
+    margin-top: 90px;
+}
+
+.footer-columns {
+    margin: 50px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.footer-column h3 {
+    margin-top: 52px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.footer-column ul li:hover {
+    text-decoration: underline;
+    color: #d32f2f;
+}
+
+.store-locator, .app-download {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.store-locator h3, .app-download h3 {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.app-links img {
+    width: 120px;
+    margin: 0 10px;
+}
+
+.footer-bottom {
+    background-color: #333;
+    color: #fff;
+    padding: 70px 50px;
+}
+
+.footer-bottom .privacy-settings a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.footer-bottom .privacy-settings a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom p {
+    margin-top: 10px;
+    font-size: 8px;
+    line-height: 1.6;
+}

@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #111;
+    color: #f0f0f0;
+}
+
+header {
+    background-color: transparent;
+    padding: 20px 50px;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    max-width: 80px;
+    border-radius: 50%;
+    border: 2px solid #f0f0f0;
+    transition: transform 0.3s;
+}
+
+header .logo img:hover {
+    transform: rotate(360deg);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f0f0f0;
+    font-weight: 500;
+    font-size: 18px;
+    position: relative;
+    transition: color 0.7s;
+}
+
+nav ul li a::before {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #da8787;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s;
+}
+
+nav ul li a:hover {
+    color: #da8787;
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1);
+}
+.header-icons a {
+    color: #f0f0f0;
+    margin-left: 20px;
+    font-size: 22px;
+    transition: color 0.3s;
+}
+
+.header-icons a:hover {
+    color: #da8787;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #da8787, #111);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: #f0f0f0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #111;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #da8787;
+    color: #f0f0f0;
+    transform: scale(1.05);
+}
+.content {
+    padding: 60px 0;
+    display: grid;
+    gap: 20px;
+
+}
+
+.item {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px; 
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 20px;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+.item:hover img {
+    transform: scale(1.05);
+    filter: brightness(0.8);
+}
+
+.text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 80%;
+    transition: background-color 0.3s;
+}
+
+.text h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.text a {
+    color: #da8787;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 18px;
+}
+
+.text a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .content {
+        padding: 30px 20px;
+        gap: 20px;
+    }
+
+    .item {
+        height: 200px; 
+    }
+
+    .item img {
+        border-radius: 15px;
+    }
+
+    .text {
+        bottom: 15px;
+        left: 15px;
+        padding: 10px;
+    }
+
+    .text h3 {
+        font-size: 20px;
+    }
+
+    .text a {
+        font-size: 16px;
+    }
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
