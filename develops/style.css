@@ -1,6 +1,18 @@
-*{
+body {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.container>.item*3
+
+details {
+    padding: 20px;
+}
+summary {
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+p {
+    margin: 5px 0;
+}

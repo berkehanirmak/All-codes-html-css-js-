@@ -1,0 +1,20 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: #eeeeea;
+}
+
+input{
+    display: none;
+}
+input:checked+label{
+    width:600px ;
+}
+input:checked+label .description{
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}

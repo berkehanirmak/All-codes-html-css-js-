@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>Minimal Button Design</title>
+
+<style>
+    body {
+        background-color: #f0f0f0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+    }
+
+    .btnDiv {
+        display: flex;
+        gap: 20px;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 16px;
+        color: #333;
+        background: transparent;
+        border: 2px solid #333;
+        border-radius: 50px;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.4s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    button i {
+        transition: transform 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #333;
+        color: #fff;
+    }
+
+    button:hover i {
+        transform: rotate(360deg);
+    }
+
+    /* Start Button */
+    .btn {
+        border-color: #4CAF50;
+        color: #4CAF50;
+    }
+
+    .btn:hover {
+        background-color: #4CAF50;
+    }
+
+    /* Stop Button */
+    .btn2 {
+        border-color: #FF5722;
+        color: #FF5722;
+    }
+
+    .btn2:hover {
+        background-color: #FF5722;
+    }
+
+    /* Continue Button */
+    .btn3 {
+        border-color: #2196F3;
+        color: #2196F3;
+    }
+
+    .btn3:hover {
+        background-color: #2196F3;
+    }
+</style>
+</head>
+<body>
+
+<div class="btnDiv">
+  <button class="btn">Start <i class="fa-solid fa-play"></i></button>
+  <button class="btn2">Stop <i class="fa-solid fa-stop"></i></button>
+  <button class="btn3">Continue <i class="fa-solid fa-forward"></i></button>
+</div>
+
+</body>
+</html>

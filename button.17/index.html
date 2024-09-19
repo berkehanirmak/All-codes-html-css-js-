@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<title>Effective Button Design</title>
+
+<style>
+    body {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+    }
+
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .btnDiv {
+        display: flex;
+        gap: 20px;
+    }
+
+    button {
+        padding: 15px 30px;
+        font-size: 16px;
+        color: #fff;
+        background: linear-gradient(135deg, #1e1e1e, #333);
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.4s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    button::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.1), transparent);
+        transform: rotate(45deg);
+        transition: all 0.6s ease;
+        z-index: -1;
+    }
+
+    button::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 300%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        transition: 0.4s;
+        transform: skewX(-25deg);
+    }
+
+    button:hover::after {
+        left: 100%;
+    }
+
+    button:hover::before {
+        top: -30%;
+        left: -30%;
+        background: radial-gradient(circle, rgba(255, 255, 255, 0.3), transparent);
+    }
+
+    button:hover {
+        background: linear-gradient(135deg, #444, #555);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(255, 255, 255, 0.2);
+        transform: scale(1.1);
+    }
+
+    button i {
+        transition: transform 0.4s ease;
+    }
+
+    button:hover i {
+        transform: scale(1.2) rotate(360deg);
+    }
+
+    /* Start Button */
+    .btn {
+        background-image: linear-gradient(135deg, #00ff99, #00ccff);
+        box-shadow: 0 0 15px rgba(0, 255, 153, 0.6), 0 0 25px rgba(0, 204, 255, 0.8);
+    }
+
+    .btn:hover {
+        background-image: linear-gradient(135deg, #00cc99, #0099ff);
+    }
+
+    /* Stop Button */
+    .btn2 {
+        background-image: linear-gradient(135deg, #ff5f6d, #ffc371);
+        box-shadow: 0 0 15px rgba(255, 95, 109, 0.6), 0 0 25px rgba(255, 195, 113, 0.8);
+    }
+
+    .btn2:hover {
+        background-image: linear-gradient(135deg, #ff4e60, #ffb366);
+    }
+
+    /* Continue Button */
+    .btn3 {
+        background-image: linear-gradient(135deg, #f7971e, #ffd200);
+        box-shadow: 0 0 15px rgba(247, 151, 30, 0.6), 0 0 25px rgba(255, 210, 0, 0.8);
+    }
+
+    .btn3:hover {
+        background-image: linear-gradient(135deg, #f68a1d, #ffc800);
+    }
+</style>
+</head>
+<body>
+
+<div class="btnDiv">
+  <button class="btn">Start <i class="fa-solid fa-play"></i></button>
+  <button class="btn2">Stop <i class="fa-solid fa-stop"></i></button>
+  <button class="btn3">Continue <i class="fa-solid fa-forward"></i></button>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Interactive Video Page</title>
+</head>
+<body>
+    <div class="sidebar">
+        <ul>
+            <li><i class="fa-solid fa-home"></i> Home</li>
+            <li><i class="fa-solid fa-film"></i> Videos</li>
+            <li><i class="fa-solid fa-cog"></i> Settings</li>
+            <li><i class="fa-solid fa-user"></i> Profile</li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        <header>
+            <h1>Video Player Website</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button><i class="fa-solid fa-search"></i></button>
+            </div>
+        </header>
+
+        <div class="content">
+            <div class="main-video-area">
+                <div class="video-box">
+                    <i class="fa-solid fa-play play-icon"></i>
+                    <p class="video-overlay">Video Placeholder</p>
+                </div>
+                <p class="video-description">This is a description of the video. It explains the content and what the viewer can expect to see.</p>
+
+                <div class="interactions">
+                    <div class="like-comment">
+                        <button class="like-btn"><i class="fa-solid fa-thumbs-up"></i> Like <span id="like-count">247</span></button>
+                        <button class="dislike-btn"><i class="fa-solid fa-thumbs-down"></i> Dislike <span id="dislike-count">25</span></button>
+                    </div>
+                    <div class="comments-section">
+                        <h3>Comments</h3>
+                        <textarea placeholder="Add a comment..." id="comment-box"></textarea>
+                        <button class="submit-comment" onclick="addComment()">Submit</button>
+                        <div id="comment-list"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="related-videos">
+                <h3>Related Videos</h3>
+                <div class="video-thumbnail" onclick="playVideo('Video 1')">Video 1</div>
+                <div class="video-thumbnail" onclick="playVideo('Video 2')">Video 2</div>
+                <div class="video-thumbnail" onclick="playVideo('Video 3')">Video 3</div>
+                <div class="video-thumbnail" onclick="playVideo('Video 4')">Video 4</div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2024 CODE.GRAMMER.TECHNO. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        let likeCount = 247;
+        let dislikeCount = 25;
+        let isLiked = false;
+        let isDisliked = false;
+
+        // Like Button
+        document.querySelector('.like-btn').addEventListener('click', () => {
+            const likeBtn = document.querySelector('.like-btn');
+            if (!isLiked) {
+                likeCount++;
+                likeBtn.style.backgroundColor = '#ff007f'; // Pembe renk
+                if (isDisliked) {
+                    dislikeCount--;
+                    isDisliked = false;
+                    document.querySelector('.dislike-btn').style.backgroundColor = ''; // Varsayılan renge dön
+                }
+                isLiked = true;
+                document.getElementById('like-count').innerText = likeCount;
+                document.getElementById('dislike-count').innerText = dislikeCount;
+            } else {
+                likeCount--;
+                likeBtn.style.backgroundColor = ''; // Varsayılan renge dön
+                isLiked = false;
+                document.getElementById('like-count').innerText = likeCount;
+            }
+        });
+
+        // Dislike Button
+        document.querySelector('.dislike-btn').addEventListener('click', () => {
+            const dislikeBtn = document.querySelector('.dislike-btn');
+            if (!isDisliked) {
+                dislikeCount++;
+                dislikeBtn.style.backgroundColor = '#ff007f'; // Pembe renk
+                if (isLiked) {
+                    likeCount--;
+                    isLiked = false;
+                    document.querySelector('.like-btn').style.backgroundColor = ''; // Varsayılan renge dön
+                }
+                isDisliked = true;
+                document.getElementById('dislike-count').innerText = dislikeCount;
+                document.getElementById('like-count').innerText = likeCount;
+            } else {
+                dislikeCount--;
+                dislikeBtn.style.backgroundColor = ''; // Varsayılan renge dön
+                isDisliked = false;
+                document.getElementById('dislike-count').innerText = dislikeCount;
+            }
+        });
+
+        // Add Comment Function
+        function addComment() {
+            const commentBox = document.getElementById('comment-box');
+            const commentList = document.getElementById('comment-list');
+            const commentText = commentBox.value.trim();
+
+            if (commentText) {
+                const comment = document.createElement('div');
+                comment.classList.add('comment');
+                comment.innerText = commentText;
+                commentList.appendChild(comment);
+                commentBox.value = ''; // Clear comment box after submission
+            }
+        }
+
+        // Play Video Placeholder Function
+        function playVideo(videoTitle) {
+            const videoBox = document.querySelector('.video-box');
+            videoBox.querySelector('.video-overlay').innerText = videoTitle + ' is playing...';
+        }
+    </script>
+</body>
+</html>

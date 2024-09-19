@@ -1,0 +1,68 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #77f980 10%, #623aa2 100%);
+    position: relative;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter:blur(5px) ;
+    z-index: -1;
+}
+
+.icon-container {
+    display: flex;
+    gap: 20px;
+}
+
+.glassIcon {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.glassIcon:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: skewX(45deg) translateX(150%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.glassIcon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+}
+
+.glassIcon:hover:before {
+    transform: skewX(45deg) translateX(-150%);
+}

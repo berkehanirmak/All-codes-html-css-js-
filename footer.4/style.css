@@ -1,0 +1,91 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #00c6ff 10%, #0072ff 100%);
+    position: relative;
+}
+
+body:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.icon-container {
+    display: flex;
+    gap: 20px;
+}
+
+.circleGlassIcon {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+    font-size: 28px;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s, box-shadow 0.4s, background 0.4s;
+}
+
+.circleGlassIcon:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: skewX(45deg) translateX(150%);
+    transition: transform 0.5s ease-in-out;
+}
+
+.circleGlassIcon:hover {
+    transform: translateY(-12px) scale(1.1);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.circleGlassIcon:hover:before {
+    transform: skewX(45deg) translateX(-150%);
+}
+
+.circleGlassIcon i {
+    transition: color 0.4s;
+}
+
+
+
+/* Follow text hidden by default */
+#followText {
+    margin-top: 45px;
+    font-size: 20px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+/* Show when active */
+#followText.active {
+    opacity: 1;
+}
