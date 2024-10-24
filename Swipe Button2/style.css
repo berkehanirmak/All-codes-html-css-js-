@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn {
+    position: relative;
+    display: inline-block;
+    padding: 20px 40px;
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-decoration: none;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    background: #fff;
+    color: #2c3e50;
+}
+
+.btn span {
+    margin-left: 10px;
+    transition: 0.5s;
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    transition: width 0.7s ease;
+}
+
+.btn:hover:before {
+    width: 100%;
+}
+
+.btn i {
+    color: #fff;
+    transition: 0.7s;
+}
+
+.btn:hover i {
+    color: #2c3e50;
+}
+
+/* Download Button */
+.download-btn {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.download-btn:hover {
+    background: #4caf50;
+    color: #fff;
+}
+
+.download-btn:before {
+    background: #4caf50;
+}
+
+.download-btn:hover i {
+    color: #fff;
+}
+
+/* Contact Us Button */
+.contact-btn {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.contact-btn:hover {
+    background: #e74c3c;
+    color: #fff;
+}
+
+.contact-btn:before {
+    background: #e74c3c;
+}
+
+.contact-btn:hover i {
+    color: #fff;
+}
+
+/* Learn More Button */
+.learn-more-btn {
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.learn-more-btn:hover {
+    background: #3498db;
+    color: #fff;
+}
+
+.learn-more-btn:before {
+    background: #3498db;
+}
+
+.learn-more-btn:hover i {
+    color: #fff;
+}

@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1e1f26;
+}
+
+label.toggle {
+    position: relative;
+    width: 140px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+label.toggle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 70px;
+    background: #222;
+    border-radius: 35px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s;
+}
+
+label input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    margin-left: -70px;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(145deg, #34363b, #4d4f55);
+    border-radius: 50%;
+    transition: 0.5s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label input:checked ~ .slider {
+    transform: translateX(70px);
+    background: linear-gradient(145deg, #00b4d8, #0096c7);
+    box-shadow: 0 4px 15px rgba(0, 180, 216, 0.4), 0 0 30px rgba(0, 180, 216, 0.3);
+}
+
+.iconBox i {
+    color: #aaa;
+    font-size: 1.8em;
+    transition: color 0.5s, filter 0.5s;
+}
+
+label input:checked ~ .slider .iconBox i {
+    color: #0963ae;
+    filter: drop-shadow(0 0 10px #00ffe2) drop-shadow(0 0 20px #00ffe2);
+}
+

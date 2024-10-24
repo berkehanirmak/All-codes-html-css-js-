@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Dropdown Icon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #2b2b2b;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dropdown-icon {
+            position: relative;
+            width: 240px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .dropdown-icon span {
+            display: inline-block;
+            position: absolute;
+            width: 120px;
+            height: 8px;
+            background: #00ffcc;
+            border-radius: 20px;
+            transition: 0.5s;
+            cursor: pointer;
+            box-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px rgba(0, 255, 204, 0.5);
+        }
+
+        .dropdown-icon span:nth-child(1) {
+            left: 24px;
+            transform: rotate(45deg);
+        }
+
+        .dropdown-icon:hover span:nth-child(1) {
+            transform: rotate(135deg);
+        }
+
+        .dropdown-icon span:nth-child(2) {
+            right: 16px;
+            transform: rotate(-45deg);
+        }
+
+        .dropdown-icon:hover span:nth-child(2) {
+            transform: rotate(-135deg);
+        }
+
+        .dropdown-icon:hover span {
+            background: #ff00aa;
+            box-shadow: 0 0 10px #ff00aa, 0 0 30px #ff00aa, 0 0 50px rgba(255, 0, 170, 0.7);
+        }
+    </style>
+</head>
+<body>
+    <div class="dropdown-icon">
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>

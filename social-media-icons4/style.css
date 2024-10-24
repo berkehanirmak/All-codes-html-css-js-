@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #141414;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1e1e1e, #2b2b2b);
+    position: relative;
+    z-index: 1;
+}
+
+.social-icons {
+    display: flex;
+    gap: 30px;
+}
+
+.icon-circle {
+    width: 120px;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.icon-circle dotlottie-player {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.icon-circle:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.icon-circle:hover dotlottie-player {
+    transform: scale(1.2);
+}
+

@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+    text-align: center;
+}
+
+.animated-text {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    position: relative;
+    opacity: 0;
+    animation: text-animation 3s ease-in-out infinite;
+    transform-origin: center;
+    display: inline-block;
+}
+
+/* New Animation */
+@keyframes text-animation {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg);
+        color: #f39c12;
+    }
+    25% {
+        opacity: 1;
+        transform: scale(1.1) rotate(10deg);
+        color: #e74c3c;
+    }
+    50% {
+        transform: scale(1) rotate(0deg);
+        color: #9b59b6;
+    }
+    75% {
+        transform: scale(1.1) rotate(-10deg);
+        color: #3498db;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg);
+        color: #2ecc71;
+    }
+}

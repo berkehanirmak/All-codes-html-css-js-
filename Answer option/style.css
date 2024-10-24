@@ -1,4 +1,4 @@
-body {
+girgrgrbody {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: linear-gradient(to right, #74ebd5, #acb6e5);
     margin: 0;
@@ -33,7 +33,7 @@ h1 {
     font-size: 25px;
 }
 .question p {
-  color: #7ec60c;
+  color: #bde703;
   background-color: #000000;
   padding: 10px;
   border-radius: 10px;

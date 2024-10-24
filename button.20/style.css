@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+button {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    border: 3px solid #fff;
+    cursor: pointer;
+    outline: none;
+    background: transparent;
+    font-size: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 
+        0 0 5px #0ef, 
+        inset 0 0 10px #0ef, 
+        0 0 20px #0ef, 
+        inset 0 0 40px #0ef, 
+        inset 0 0 40px #0ef, 
+        0 0 80px #0ef, 
+        0 0 160px #0ef;
+    transition: .3s;
+}
+
+button:hover {
+    box-shadow: 
+        0 0 5px #f0f, 
+        inset 0 0 10px #f0f, 
+        0 0 20px #f0f, 
+        inset 0 0 40px #f0f, 
+        inset 0 0 40px #f0f, 
+        0 0 80px #f0f, 
+        0 0 160px #f0f;
+}
+
+button::before {
+    content: 'Follow Me';
+    position: absolute;
+    text-shadow: 
+        0 0 20px #0ef, 
+        0 0 20px #0ef, 
+        0 0 20px #0ef, 
+        0 0 20px #0ef;
+    transition: .3s;
+}
+
+button:hover::before {
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+button::after {
+    content: 'Thanks!';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    text-shadow: 
+        0 0 20px #f0f, 
+        0 0 20px #f0f, 
+        0 0 20px #f0f, 
+        0 0 20px #f0f;
+    transition: transform .3s, opacity .3s;
+    transform: translateY(-50px);
+}
+
+button:hover::after {
+    transform: translateY(0);
+    opacity: 1;
+}

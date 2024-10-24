@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometric Loading Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #0e153a;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .loader-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 120px;
+            height: 120px;
+            position: relative;
+        }
+
+        .loader {
+            position: absolute;
+            width: 90px;
+            height: 90px;
+            background: transparent;
+            border: 5px solid #25e6ff;
+            border-radius: 50%;
+            animation: scaleUp 1.5s ease-in-out infinite;
+        }
+
+        .loader:nth-child(2) {
+            animation-delay: 0.3s;
+            border-color: #ff5d5d;
+        }
+
+        .loader:nth-child(3) {
+            animation-delay: 0.6s;
+            border-color: #ffcc29;
+        }
+
+        @keyframes scaleUp {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.5);
+                opacity: 0.5;
+            }
+        }
+
+        .text {
+            position: absolute;
+            top: 355px;
+            font-size: 14px;
+            margin-left: 14px;
+            color: #ffffff;
+            letter-spacing: 2px;
+            animation: fadeText 2s ease-in-out infinite;
+        }
+
+        @keyframes fadeText {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="loader-container">
+        <div class="loader"></div>
+        <div class="loader"></div>
+        <div class="loader"></div>
+    </div>
+    <div class="text">Loading...</div>
+
+</body>
+</html>

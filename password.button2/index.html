@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Password Strength</title>
+</head>
+<body>
+    <div class="password-box">
+        <h2>Create Your Password</h2>
+        <div class="input-wrapper">
+            <input type="text" id="password" placeholder="Enter your password" autocomplete="off">
+            <span class="input-underline"></span>
+        </div>
+        <div id="password-feedback">Please follow the rules below:</div>
+        <ul class="password-rules">
+            <li id="length-rule">At least 12 characters</li>
+            <li id="uppercase-rule">Contains uppercase and lowercase letters</li>
+            <li id="number-rule">Includes at least one number</li>
+            <li id="symbol-rule">Has at least one special character (@, #, $, !)</li>
+        </ul>
+    </div>
+
+    <script>
+    const passwordInput = document.getElementById("password");
+    const feedback = document.getElementById("password-feedback");
+    const lengthRule = document.getElementById("length-rule");
+    const uppercaseRule = document.getElementById("uppercase-rule");
+    const numberRule = document.getElementById("number-rule");
+    const symbolRule = document.getElementById("symbol-rule");
+    const underline = document.querySelector('.input-underline');
+
+    function validatePassword(password) {
+        const lengthValid = password.length >= 12;
+        const uppercaseValid = /[A-Z]/.test(password) && /[a-z]/.test(password);
+        const numberValid = /\d/.test(password);
+        const symbolValid = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+        lengthRule.style.color = lengthValid ? "green" : "orange";
+        uppercaseRule.style.color = uppercaseValid ? "green" : "orange";
+        numberRule.style.color = numberValid ? "green" : "orange";
+        symbolRule.style.color = symbolValid ? "green" : "orange";
+
+        const isValid = lengthValid && uppercaseValid && numberValid && symbolValid;
+        return isValid;
+    }
+
+    passwordInput.addEventListener("input", (event) => {
+        const password = event.target.value;
+        const isValid = validatePassword(password);
+        underline.style.backgroundColor = isValid ? "green" : "orange";
+    });
+    </script>
+</body>
+</html>

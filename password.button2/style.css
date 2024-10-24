@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #03294b; /* Soft blue background */
+}
+
+.password-box {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+    border: 2px solid #87cefa; /* Light blue border */
+}
+
+.password-box h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.password-box input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.1em;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ddd;
+    background: none;
+}
+
+.input-wrapper .input-underline {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.password-box #password-feedback {
+    font-size: 0.9em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.password-rules {
+    list-style: none;
+    text-align: left;
+}
+
+.password-rules li {
+    font-size: 0.9em;
+    margin-bottom: 8px;
+    color: orange;
+}

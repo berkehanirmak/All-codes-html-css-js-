@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #001f3f; /* Koyu mavi arka plan */
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  button {
+    background-color: #6f42c1; /* Mor buton */
+    color: white;
+    padding: 15px 50px;
+    font-size: 16px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+   
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  button.clicked {
+    background-color: #fd7e14; /* Tıklanınca turuncu */
+  }
+  

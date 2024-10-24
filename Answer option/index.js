@@ -1,8 +1,10 @@
-const obj = {
-  name: "Alice",
-  greet: function () {
-    console.log(this.name);
-  },
-};
-const greet = obj.greet;
-greet();
+
+
+let a = [1, 2, 3];
+let b = a;
+b.push(4);
+console.log(a);
+
+
+
+
