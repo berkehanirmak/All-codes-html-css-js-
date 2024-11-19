@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1c1c1c;
+}
+
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    background: #2a2a2a;
+}
+
+.calculator {
+    display: grid;
+    width: 220px;
+    gap: 6px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 55px;
+}
+
+.calculator .value {
+    grid-column: span 4;
+    height: 50px;
+    text-align: right;
+    border: none;
+    outline: none;
+    padding: 10px;
+    font-size: 1.5em;
+    color: #111;
+    background: linear-gradient(145deg, #8ea57d, #667b5a);
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.1), inset -2px -2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.calculator span {
+    display: grid;
+    width: 100%;
+    height: 55px;
+    color: #fff;
+    background: linear-gradient(145deg, #333, #111);
+    place-items: center;
+    border-radius: 5px;
+    font-size: 1.3em;
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5), -2px -2px 5px rgba(255, 255, 255, 0.1);
+    transition: background 0.2s, transform 0.1s;
+}
+
+.calculator span:active {
+    background: linear-gradient(145deg, #444, #222);
+    transform: scale(0.95);
+}
+
+.calculator span.clear {
+    background: linear-gradient(145deg, #b22222, #8b0000);
+    color: #fff;
+}
+
+.calculator span.plus {
+    background: linear-gradient(145deg, #2a3b5a, #1a2b4a);
+    color: #fff;
+}
+
+.calculator span.equal {
+    background: linear-gradient(145deg, #1c5c2e, #13451e);
+    color: #fff;
+    grid-row: span 2; /* Adjusting the equal button to span two rows */
+}
+
+@media (max-width: 600px) {
+    .calculator {
+        width: 100%;
+        grid-auto-rows: 45px;
+    }
+    .calculator .value {
+        font-size: 1.2em;
+    }
+    .calculator span {
+        font-size: 1em;
+    }
+}

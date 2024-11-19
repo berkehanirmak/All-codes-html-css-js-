@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #fff;
+    padding: 20px;
+}
+
+.accordion {
+    width: 100%;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.accordion .contentBx {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
+
+.accordion .contentBx:last-child {
+    border-bottom: none;
+}
+
+.accordion .contentBx .label {
+    background: linear-gradient(90deg, #56ccf2, #2f80ed);
+    padding: 20px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.accordion .contentBx .label:hover {
+    background: linear-gradient(90deg, #2f80ed, #56ccf2);
+    transform: scale(1.02);
+    transition: all 0.3s ease;
+}
+
+.accordion .contentBx .label::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.accordion .contentBx.active .label::after {
+    content: '-';
+    transform: rotate(180deg);
+}
+
+.accordion .contentBx .content {
+    height: 0;
+    padding: 0 20px;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.accordion .contentBx.active .content {
+    height: auto;
+    padding: 20px;
+}

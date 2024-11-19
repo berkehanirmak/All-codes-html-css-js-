@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f3f4f6;
+}
+.accordion {
+    max-width: 800px;
+}
+.accordion .contentBx {
+    position: relative;
+    margin: 10px 20px;
+}
+.accordion .contentBx .label {
+    position: relative;
+    padding: 15px;
+    background: #ff6f61;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+.accordion .contentBx .label:hover {
+    background: #ff4b3e;
+    transition: background 0.3s;
+}
+.accordion .contentBx .label::before {
+    content: '+';
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 1.5em;
+}
+.accordion .contentBx.active .label::before {
+    content: '-';
+}
+.accordion .contentBx .content {
+    position: relative;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s, padding 0.5s;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.accordion .contentBx.active .content {
+    height: 200px;
+    padding: 15px;
+}
+.accordion .contentBx .content p {
+    color: #4b5563;
+    font-size: 1rem;
+    line-height: 1.6;
+}

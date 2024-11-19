@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Face</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="face">
+        <div class="eyes">
+            <div class="eye"></div>
+            <div class="eye"></div>
+        </div>
+    </div>
+    <script>
+        document.querySelector('body').addEventListener('mousemove', eyeball);
+
+        function eyeball(event) {
+            const eyes = document.querySelectorAll('.eye');
+            eyes.forEach((eye) => {
+                const eyeRect = eye.getBoundingClientRect();
+                const eyeX = eyeRect.left + eye.clientWidth / 2;
+                const eyeY = eyeRect.top + eye.clientHeight / 2;
+                const radian = Math.atan2(event.pageX - eyeX, event.pageY - eyeY);
+                const rotation = radian * (180 / Math.PI) * -1 + 270;
+                eye.style.transform = `rotate(${rotation}deg)`;
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1e2b3b;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+label {
+    position: relative;
+    margin: 5px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 1.5em;
+    color: #fff;
+}
+
+label input {
+    appearance: none;
+    width: 0;
+    height: 0;
+}
+
+label span {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    margin-right: 15px;
+    border: 2px solid #fff;
+    transition: 0.5s;
+}
+
+label input:checked + span.check {
+    border-color: #0f0;
+    background: rgb(15, 123, 15);
+    position: relative;
+}
+
+label input:checked + span.check::before {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 4px;
+    width: 6px;
+    height: 14px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+label input:checked + span.cross {
+    border-color: #f00;
+    background: rgb(152, 13, 13);
+    position: relative;
+}
+
+label input:checked + span.cross::before,
+label input:checked + span.cross::after {
+    content: "";
+    position: absolute;
+    top: 11px;
+    left: 6px;
+    width: 14px;
+    height: 2px;
+    background: white;
+    transform: rotate(45deg);
+}
+
+label input:checked + span.cross::after {
+    transform: rotate(-45deg);
+}

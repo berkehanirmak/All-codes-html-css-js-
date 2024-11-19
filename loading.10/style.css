@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1e1e, #333);
+    overflow: hidden;
+}
+
+h1 {
+    position: relative;
+    font-size: 6em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.2em;
+    color: transparent;
+    -webkit-text-stroke: 2px #444;
+    animation: textGlow 1.5s ease-in-out infinite alternate;
+}
+
+h1::before {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    color: #03a9f4;
+    background: linear-gradient(90deg, #03a9f4, #00ffcc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    overflow: hidden;
+    border-right: 2px solid #03a9f4;
+    animation: typing 6s steps(31, end) infinite, blink 0.9s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+    100% {
+        border-color: #03a9f4;
+    }
+}
+

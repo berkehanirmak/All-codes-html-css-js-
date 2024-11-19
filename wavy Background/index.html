@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Accordion</title>
+</head>
+<body>
+    <div class="accordion">
+        <div class="contentBx">
+            <div class="label">List One</div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Officia sit quisquam ex culpa harum 
+                    eligendi architecto vel similique optio, 
+                    iure tempora, inventore, atque autem? Sequi itaque delectus 
+                    neque architecto nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Fugit inventore minima repellat reiciendis atque, vitae reprehenderit numquam tempora 
+                    fuga labore excepturi repudiandae voluptas pariatur deserunt similique, 
+                    necessitatibus, non ratione unde?
+                </p>
+            </div>
+        </div>
+        <div class="contentBx">
+            <div class="label">List Two</div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Officia sit quisquam ex culpa harum 
+                   eligendi architecto vel similique optio, 
+                   iure tempora, inventore, atque autem? Sequi itaque delectus 
+                   neque architecto nihil?</p>
+            </div>
+        </div>
+        <div class="contentBx">
+            <div class="label">List Three</div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Officia sit quisquam ex culpa harum 
+                   eligendi architecto vel similique option</p>
+            </div>
+        </div>
+        <div class="contentBx">
+            <div class="label">List Four</div>
+            <div class="content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quae</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const accordion = document.getElementsByClassName('contentBx');
+        for (let i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+</html>

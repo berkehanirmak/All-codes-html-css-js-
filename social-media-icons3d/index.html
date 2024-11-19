@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <title>Social Media Icons</title>
+</head>
+<body>
+    <ul class="sci">
+        <li style="--clr:#ff0000;"><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+        <li style="--clr:#333333;"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+        <li style="--clr:#00a783;"><a href="#"><i class="fa-brands fa-whatsapp"></i></a></li>
+    </ul>    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js" integrity="sha512-wC/cunGGDjXSl9OHUH0RuqSyW4YNLlsPwhcLxwWW1CR4OeC2E1xpcdZz2DeQkEmums41laI+eGMw95IJ15SS3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        // VanillaTilt uygulanması
+        VanillaTilt.init(document.querySelectorAll(".sci li a"), {
+            max: 30,
+            speed: 400,
+            glare: true,
+            "max-glare": 0.5
+        });
+
+        // Arka plan rengini değiştirme
+        let list = document.querySelectorAll(".sci li");
+        let bg = document.querySelector("body");
+
+        list.forEach((element) => {
+            element.addEventListener("mouseover", function(event) {
+                let color = element.style.getPropertyValue("--clr");
+                bg.style.backgroundColor = color;
+            });
+            element.addEventListener("mouseleave", function() {
+                bg.style.backgroundColor = '#fff';
+            });
+        });
+    </script>
+</body>
+</html>
