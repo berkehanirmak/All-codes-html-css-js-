@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1a237e, #0d47a1);
+    overflow: hidden;
+}
+
+#clock h2 {
+    position: relative;
+    display: block;
+    color: #fff;
+    text-align: center;
+    margin: 10px 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 1em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+#clock #time {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#clock #time div {
+    position: relative;
+    text-align: center;
+}
+
+#clock #time div span {
+    position: relative;
+    display: block;
+    width: 120px;
+    height: 100px;
+    background: linear-gradient(135deg, #2196f3, #1e88e5);
+    color: #fff;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+}
+
+#clock #time div span:hover {
+    transform: scale(1.1);
+}
+
+#clock #time div span:nth-child(2) {
+    height: 30px;
+    font-size: 0.9em;
+    letter-spacing: 0.2em;
+    font-weight: 500;
+    background: #0d47a1;
+    border-radius: 15px;
+    margin-top: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+}
+
+#clock #time div:last-child span {
+    background: linear-gradient(135deg, #ff006a, #d500f9);
+}
+
+#clock #time div:last-child span:nth-child(2) {
+    background: #8e24aa;
+}

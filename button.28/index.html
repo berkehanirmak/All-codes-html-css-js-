@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Toggle Redesign</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #333;
+            min-height: 100vh;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        label {
+            position: relative;
+            width: 200px;
+            height: 100px;
+            background: #444;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+
+        label input {
+            display: none;
+        }
+
+        label .slider {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translate(10px, -50%);
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(145deg, #555, #333);
+            border-radius: 50%;
+            transition: all 0.4s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        label input:checked + .slider {
+            transform: translate(110px, -50%);
+            background: linear-gradient(145deg, #66ff99, #33cc66);
+            box-shadow: 0 10px 20px rgba(0, 255, 150, 0.5);
+        }
+
+        label .slider ion-icon {
+            font-size: 2em;
+            color: white;
+            transition: transform 0.4s;
+        }
+
+        label input:checked + .slider ion-icon {
+            transform: rotate(360deg);
+        }
+
+        .bulb {
+            position: absolute;
+            top: 150px;
+            width: 250px;
+            height: 250px;
+            background: url('bulb_off.jpg') no-repeat center/cover;
+            transition: all 0.5s ease;
+            left: 50px;
+        }
+
+        label input:checked ~ .bulb {
+            background: url('bulb_on.jpg') no-repeat center/cover;
+        }
+
+        .title {
+            position: absolute;
+            top: 20px;
+            font-size: 1.8em;
+            color: #f4f4f4;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="title">Light Control</div>
+    <label>
+        <input type="checkbox">
+        <div class="slider"><ion-icon name="power"></ion-icon></div>
+    </label>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>    
+</body>
+</html>

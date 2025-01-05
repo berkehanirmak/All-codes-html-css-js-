@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(145deg, #4a148c, #1a237e);
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 60px;
+}
+
+ul li {
+    position: relative;
+    list-style: none;
+    width: 60px;
+    height: 52px;
+    background: #ff5722;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4), inset 0 2px 6px rgba(255, 255, 255, 0.1);
+}
+
+ul li:hover {
+    background: #ff8a65;
+    transform: scale(1.2) rotate(15deg);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5), inset 0 4px 8px rgba(255, 255, 255, 0.15);
+}
+
+ul li .content {
+    position: absolute;
+    top: 70px; /* Corrected positioning */
+    left: 50%; /* Centered horizontally */
+    transform: translateX(-50%) translateY(30px); /* Center alignment */
+    width: 350px;
+    background: #ffffff;
+    color: #333;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    z-index: 10; /* Ensure content appears above other elements */
+}
+
+ul li .content::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    z-index: 9;
+}
+
+ul li:hover .content {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+ul li .content h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a237e;
+    margin-bottom: 10px;
+}
+
+ul li .content p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #616161;
+    font-weight: 400;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    ul {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    ul li .content {
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Lora", serif; /* Adds a classic serif font */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #2c3e50, #34495e);
+    color: #ecf0f1;
+}
+
+#clock {
+    text-align: center;
+    padding: 30px 50px;
+    background: rgba(44, 62, 80, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#clock h2 {
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: bold;
+    color: #ecf0f1;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 10px;
+}
+
+#clock #time {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+#clock #time div {
+    position: relative;
+    text-align: center;
+}
+
+#clock #time div span {
+    display: block;
+    width: 90px;
+    height: 90px;
+    background: linear-gradient(145deg, #34495e, #2c3e50);
+    color: #ecf0f1;
+    font-weight: 600;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2), inset 0 2px 4px rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#clock #time div span:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3), inset 0 4px 6px rgba(255, 255, 255, 0.2);
+}
+
+#clock #time div span:nth-child(2) {
+    font-size: 0.8em;
+    font-weight: 500;
+    margin-top: 10px;
+    color: #bdc3c7;
+    text-transform: uppercase;
+}

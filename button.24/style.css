@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html, body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffffff 0%, #d7e1ec 100%);
+}
+
+.wrapper {
+    display: flex;
+    gap: 20px;
+}
+
+.wrapper .button {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper .button .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.wrapper .button.facebook .icon {
+    background: #3b5998;
+}
+
+.wrapper .button.twitter .icon {
+    background: #1da1f2;
+}
+
+.wrapper .button.instagram .icon {
+    background: linear-gradient(45deg, #fd1d1d, #fcb045);
+}
+
+.wrapper .button.linkedin .icon {
+    background: #0077b5;
+}
+
+.wrapper .button.youtube .icon {
+    background: #ff0000;
+}
+
+.wrapper .button span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.wrapper .button:hover span {
+    color: #555;
+}
